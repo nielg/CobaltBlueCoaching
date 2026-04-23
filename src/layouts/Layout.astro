@@ -10,14 +10,14 @@ import Nav from '../components/Nav.astro';
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<link rel="icon" href="/favicon.ico" />
+		<link rel="icon" type="image/svg+xml" href={`${import.meta.env.BASE_URL}favicon.svg`} />
+		<link rel="icon" href={`${import.meta.env.BASE_URL}favicon.ico`} />
 		<meta name="generator" content={Astro.generator} />
 		<title>Cobalt Blue Coaching</title>
 	</head>
 	<body>
 		<header>
-			<a id="left-header" href="/">
+			<a id="left-header" href={import.meta.env.BASE_URL}>
 				<Image id="logo" src={logo} alt="Cobalt Blue loge"/>
 				<h2><span class="blue-text">Cobalt Blue </span>Coaching</h2>
 
