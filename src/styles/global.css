@@ -1,0 +1,150 @@
+:root {
+  /* Brand Colors */
+  --primary: #0104eb;
+  --cobalt-blue: #0104eb;
+  --cobalt-light: #4d51ff;
+  --cobalt-dark: #0003b8;
+
+  /* Backgrounds */
+  --bg-white: #ffffff;
+  --bg-light: #f9fafb;
+  --bg-gray: #f3f4f6;
+  --bg-dark: #111827;
+
+  /* Text */
+  --text: #111827;
+  --text-main: #111827;
+  --text-black: #111827;
+  --text-gray: #4b5563;
+  --text-white: #ffffff;
+}
+
+section {
+  padding: 3.5rem;
+  margin: 2rem;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  transition: color 0.2s ease;
+}
+
+a:hover {
+  color: var(--cobalt-blue);
+}
+
+p,
+li,
+a {
+  font-size: 1.2rem;
+}
+
+.text-justify {
+  text-align: justify;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.page-title {
+  color: white;
+  background-color: var(--primary);
+  text-align: center;
+  padding: 2rem;
+}
+h1 {
+  font-size: 4rem;
+}
+h2 {
+  font-size: 3rem;
+}
+
+h3 {
+  font-size: 2rem;
+}
+
+h4 {
+  font-size: 1.5rem;
+}
+
+strong {
+  color: var(--primary);
+  font-weight: 700;
+}
+
+.blue-text {
+  color: var(--primary);
+}
+
+.black-text {
+  color: var(--text-black);
+}
+
+.gray-text {
+  color: var(--text-gray);
+}
+
+.white-text {
+  color: var(--text-white);
+}
+
+.bold {
+  font-weight: 700;
+}
+
+.bg-white {
+  background-color: var(--bg-white);
+}
+.bg-light {
+  background-color: var(--bg-light);
+}
+.bg-dark {
+  background-color: var(--bg-dark);
+}
+
+.center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.card-section {
+  border-radius: 2rem;
+  background-color: var(--bg-gray);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.04);
+  border: 1px solid rgba(0, 2, 250, 0.05);
+  transition: transform 0.3s ease;
+}
+
+.blue-section {
+  margin-left: 0;
+  margin-right: 0;
+  background-color: var(--primary);
+  position: relative;
+  padding-bottom: 8rem;
+}
+
+.custom-shape-divider-bottom-1776970740 {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+  transform: rotate(180deg);
+}
+
+.custom-shape-divider-bottom-1776970740 svg {
+  position: relative;
+  display: block;
+  width: calc(132% + 1.3px);
+  height: 100px;
+  margin: 0;
+}
+
+.custom-shape-divider-bottom-1776970740 .shape-fill {
+  fill: #ffffff;
+}

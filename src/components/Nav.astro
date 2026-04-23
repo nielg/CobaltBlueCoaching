@@ -1,0 +1,71 @@
+---
+const pathname = new URL(Astro.url).pathname;
+console.log(pathname)
+---
+
+<nav>
+    <a href="/about" class={pathname === "/about" ? "active" : ""}>Visie & Missie</a>
+    
+    <div class="dropdown">
+    <p class:list={['dropbtn', { active: pathname.startsWith("/begeleiding") }]}>
+        Begeleiding ▾
+    </p>        
+        <div class="dropdown-content">
+            <a href="/begeleiding/wetenschappen">Bijles wetenschappen</a>
+            <a href="/begeleiding/chemie">Studiebegeleiding chemie</a>
+            <a href="/begeleiding/studie">Studie coaching</a>
+        </div>
+    </div>
+
+    <a href="#">Tarieven</a>
+
+    <div class="dropdown">
+        <p class="dropbtn">Projecten ▾</p>
+        <div class="dropdown-content">
+            <a href="#">Fibre microscopy atlas</a>
+            <a href="#">Periodiek Systeem</a>
+        </div>
+    </div>
+
+    <a href="#">Contact</a>
+</nav>
+
+<style>
+	nav {
+		display: flex;
+		align-items: center;
+        gap: 2rem;
+	}
+    .active {
+        color: var(--cobalt-blue) !important;
+    }
+    .dropdown {
+        position: relative;
+        display: inline-block;
+    }
+
+    .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: white;
+        min-width: 160px;
+        box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
+        z-index: 1;
+        border-radius: 4px;
+    }
+
+    .dropdown-content a {
+        color: black;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+    }   
+
+    .dropdown-content a:hover {
+        background-color: #f1f1f1;
+    }
+
+    .dropdown:hover .dropdown-content {
+        display: block;
+    }
+</style>

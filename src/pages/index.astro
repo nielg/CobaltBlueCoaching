@@ -1,0 +1,308 @@
+---
+import Layout from '../layouts/Layout.astro';
+import { Image } from 'astro:assets';
+import profiel from '../assets/profiel.png'
+import studeren from '../assets/studeren.png'
+import book from '../assets/microscopy-book.png'
+import pse from '../assets/pse.png'
+import email from '../icons/email.svg'
+import phone from '../icons/phone.svg'
+import Btn from '../components/Btn.astro';
+---
+
+<Layout>
+  <section class="s1 card-section">
+    <div class="text gray-text introduction">
+      <h1 class="black-text">Ontdek je potentieel, <span class="blue-text">bereik je doelen</span></h1>
+      <p>Persoonlijke begeleiding voor studenten die het moeilijk hebben, en aan hun studie methode willen werken!! </p>
+    </div>
+    <Image class="img" src={studeren} alt="Vrouw die aan het studeren is"/>
+  </section>
+  <section class="whoami s2 gray-section">
+    <Image src={profiel} alt="profiel Chris De Wael" id="profiel" />
+    <div class="gray-text">
+      <h2 class="black-text">Wie ben ik</h2>
+      <p>
+        Hey! Ik ben Kris De Wael, leerkracht Chemie. Met Cobalt blue coaching wil
+        ik leerlingen en studenten begeleiden en coachen in hun leerproces.
+        <br />
+        <br />
+        Ik geloof heel sterk in ieders potentieel om te leren en te ontwikkelen.
+        Een student coachen en zien groeien geeft mij bijzonder veel voldoening en
+        motivatie. Kies je voor Cobalt blue coaching, dan krijg je een warme
+        persoonlijke begeleiding voor een aanvaardbare prijs. De sleutel tot
+        succes ligt in het bekomen van een goed gevoel, motivatie en vertrouwen
+        bij het studeren.
+      </p>
+      <h4 class="text-center blue-text bold">
+        Samen werken we hieraan, <br> zodat jij slaagt in je studies!
+      </h4>
+    </div>
+
+  </section>
+
+  <section class="aanbod s3 card-section">
+    <h2 class="black-text text-center">Waarmee kan ik je helpen</h2>
+    <div class="cards">
+      <div class="card">
+        <h4> Bijles chemie |fysica | biologie </h4>
+        <p  class="gray-text">Voor leerlingen van het middelbaar onderwijs.</p>
+      </div>
+      <div class="card">
+        <h4>Studiebegeleiding chemie</h4>
+        <p class="gray-text">voor hogeschool- of universiteitsstudenten</p>
+      </div>
+      <div class="card">
+        <h4>studiecoaching</h4>
+        <p class="gray-text">studiemethode - omgaan met stress en faalangst</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="werkwijze s4 gray-section gray-text center">
+    <div>
+      <h2 class="black-text text-center">De werkwijze</h2>
+      <p class="text-center">Een persoonlijke aanpak die jou als persoon centraal stelt</p>
+    </div>
+    <div class="list">
+      <div class="li">
+        <div class="numering">
+          <p class="bold">1</p>
+        </div>
+          <div class="text">
+          <h3 class="black-text">Kennismaking</h3>
+          <p>In een vrijblijvend gesprek verkennen we jouw situatie, doelen en verwachtingen.</p>
+        </div>
+      </div>
+      <div class="li">
+        <div class="numering">
+          <p class="bold">2</p>
+        </div>
+          <div class="text">
+          <h3 class="black-text">Plan van aanpak</h3>
+          <p>Samen stellen we een persoonlijk traject op dat aansluit bij jouw ambities en uitdagingen.</p>
+        </div>
+      </div>
+      <div class="li">
+        <div class="numering">
+          <p class="bold">3</p>
+        </div>
+          <div class="text">
+          <h3 class="black-text">Coaching sessies</h3>
+          <p>Door gerichte gesprekken en oefeningen werk je stap voor stap aan je ontwikkeling.</p>
+        </div>
+      </div>
+      <div class="li">
+        <div class="numering">
+          <p class="bold">4</p>
+        </div>
+          <div class="text">
+          <h3 class="black-text">Duurzamen groei</h3>
+          <p>Je bouwt vaardigheden en inzichten op die je ook na het traject verder helpen.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="s5 card-section">
+    <h3 class="text-center">Maak nu een afspraak</h3>
+    <div class="contact-row gray-text">
+      <div class="contact-div first">
+        <Image src={email} alt="email logo" width={50} height={50}/>
+        <p> info@cobaltbluecoaching.be</p>
+      </div>
+      <p>|</p>
+      <div class="contact-div">
+        <Image src={phone} alt="phone number logo" width={50} height={50}/>
+        <p>+32 470 61 23 07</p>
+      </div>
+    </div>
+  </section>
+  <section class="s6 gray-section gray-text">
+    <h2 class="black-text text-center">Mijn projecten</h2>
+    <div class="card-slider">
+      <div class="project-card">
+        <div class="header-container">
+          <h3 class="black-text title">Microscopy in forensic fibre examinations</h3>
+          <p class="tagline">A practical photo atlas and training tool</p>
+        </div>
+        <p> Korte beschrijving book Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae, nobis, consequatur quos omnis doloremque accusamus iure minus atque unde.</p>
+        <Btn text='Zie meer' link='#'/>
+        <Image src={book} class="project-img" alt="Cover from book"/>
+      </div>
+
+      <div class="project-card">
+        <h3 class="black-text">Periodiek Systeem van de Elementen</h3>
+        <p> Korte beschrijving pse Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae, nobis, consequatur quos omnis doloremque accusamus iure minus atque unde.</p>
+        <Btn text='Zie meer' link='#'/>
+        <Image src={pse} class="project-img" alt="Periodiek systeem design"/>
+      </div>
+    </div>
+  </section>
+</Layout>
+
+<style>
+  .s1 {
+    display: grid;
+    grid-template-columns: 4fr 5fr;
+    place-items: center;
+  }
+
+  .s1 .text {
+    width: 80%;
+  }
+  .s1 .img{
+    width: 100%;
+    height: auto;
+    border-radius: 1rem;
+  }
+
+  .whoami {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+  }
+
+  #profiel {
+    width: 100%;
+    max-width: 350px;
+    height: auto;
+    border-radius: 1.5rem;
+    object-fit: cover;
+    border: 4px solid var(--white);
+    box-shadow: 0 8px 25px rgba(0, 2, 250, 0.15);
+    justify-self: center;
+  }
+
+  .s3 .cards {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .s3 .card {
+    border: 2px solid var(--primary);
+    padding: 1rem 2rem;
+    border-radius: 1rem 2rem;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    transition: transform 0.4s ease;
+  }
+  
+  .s3 .card:hover{
+    transform: scale(1.5);
+    transform: translateY(-10px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  }
+
+  .s4 {
+    gap: 3rem;
+  }
+
+  .s4 .numering {
+    display: inline-block;
+    background-color: var(--primary);
+    width: 4rem;
+    height: 4rem;
+    border-radius: 0.5rem;
+    text-align: center;
+    color: var(--text-white);
+  }
+
+  .s4 .list{
+    display: flex;
+    flex-direction: column;
+  }
+
+  .s4 .li {
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+  }
+
+  .s4 .text {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .s4 .text h3 {
+    margin: 0;
+  }
+
+  .s5 .contact-row {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 4rem;
+  }
+
+  .s5 .contact-div{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-self: center;
+    gap: 1rem;
+    width: 100%;
+  }
+
+  .s5 .first {
+    align-items: end;
+    justify-content: end;
+  }
+
+  .s6 .card-slider {
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+    padding: 2rem 0;
+    width: 100%;
+    overflow: hidden; 
+  }
+
+  .project-card {
+    background: var(--white); 
+    padding: 2rem;
+    border-radius: 1rem;
+    transition: all 0.4s ease;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .card-slider:hover .project-card:not(:hover) {
+    opacity: 0.5;
+    transform: scale(0.95);
+  }
+
+  .project-card:hover {
+    opacity: 1;
+    transform: scale(1.02);
+    width: 300%;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+  }
+
+  .project-img {
+    width: 100%;
+    max-width: 400px; 
+    height: auto;
+    margin-top: 1.5rem;
+    border-radius: 0.5rem;
+    align-self: center;
+    display: block;
+  }
+
+
+  .header-container {
+    line-height: 1.2;
+    margin-bottom: 1rem;
+  }
+
+  .title {
+    margin-bottom: 4px;
+    letter-spacing: -0.5px;
+  }
+
+  .tagline {
+    margin-top: 0;
+    font-style: italic;
+    font-size: 1.1rem;
+  }
+</style>

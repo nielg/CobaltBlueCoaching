@@ -1,0 +1,38 @@
+---
+// Define the interface for props to get better IDE autocompletion
+interface Props {
+  text: string;
+  link: string;
+  target?: "_blank" | "_self"; // Optional: decide if it opens in a new tab
+  class?: string;             // Optional: allow passing extra CSS classes
+}
+
+const { text, link, target = "_self", class: className, ...rest } = Astro.props;
+---
+
+<div class:list={["btn-wrapper", className]}>
+  <a href={link} target={target} {...rest}>
+    {text} →
+  </a>
+</div>
+
+<style>
+  /* Basic styling to get you started */
+    .btn-wrapper{
+        margin: 2rem 0;
+    }
+
+  .btn-wrapper a {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    background-color: var(--primary);
+    color: white;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: opacity 0.2s ease;
+  }
+
+  .btn-wrapper a:hover {
+    opacity: 0.8;
+  }
+</style>
