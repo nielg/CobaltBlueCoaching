@@ -4,16 +4,16 @@ const base = import.meta.env.BASE_URL;
 ---
 
 <nav>
-    <a href={`${base}about`} class={(pathname === `${base}about` || pathname === `${base}about/`) ? "active" : ""}>Visie & Missie</a>
+    <a href={`${base}/about`} class={(pathname === `${base}about` || pathname === `${base}about/`) ? "active" : ""}>Visie & Missie</a>
     
     <div class="dropdown">
     <p class:list={['dropbtn', { active: pathname.startsWith(`${base}begeleiding`) }]}>
         Begeleiding ▾
     </p>        
         <div class="dropdown-content">
-            <a href={`${base}begeleiding/wetenschappen`}>Bijles wetenschappen</a>
-            <a href={`${base}begeleiding/chemie`}>Studiebegeleiding chemie</a>
-            <a href={`${base}begeleiding/studie`}>Studie coaching</a>
+            <a href={`${base}/begeleiding/wetenschappen`}>Bijles wetenschappen</a>
+            <a href={`${base}/begeleiding/chemie`}>Studiebegeleiding chemie</a>
+            <a href={`${base}/begeleiding/studie`}>Studie coaching</a>
         </div>
     </div>
 
