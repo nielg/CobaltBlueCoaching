@@ -4,7 +4,7 @@ import icon from "astro-icon";
 
 export default defineConfig({
   site: "https://nielg.github.io/",
-  base: "CobaltBlueCoaching",
+  base: "/CobaltBlueCoaching",
   integrations: [
     icon({
       iconDir: "src/icons",
