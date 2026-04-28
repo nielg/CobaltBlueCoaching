@@ -1,10 +1,9 @@
 ---
-// Define the interface for props to get better IDE autocompletion
 interface Props {
   text: string;
   link: string;
-  target?: "_blank" | "_self"; // Optional: decide if it opens in a new tab
-  class?: string;             // Optional: allow passing extra CSS classes
+  target?: "_blank" | "_self";
+  class?: string;             
 }
 
 const { text, link, target = "_self", class: className, ...rest } = Astro.props;
@@ -17,10 +16,9 @@ const { text, link, target = "_self", class: className, ...rest } = Astro.props;
 </div>
 
 <style>
-  /* Basic styling to get you started */
-    .btn-wrapper{
-        margin: 2rem 0;
-    }
+  .btn-wrapper{
+    margin: 2rem 0;
+  }
 
   .btn-wrapper a {
     display: inline-block;

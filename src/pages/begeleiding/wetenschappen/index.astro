@@ -1,8 +1,9 @@
 ---
+import "../../../styles/inhoud.css"
 import Layout from "../../../layouts/Layout.astro"
 import Image from "astro/components/Image.astro";
 import logo from "../../../assets/logo.png"
-import chemie from "../../../assets/chemie.png"
+import chemie from "../../../assets/icon/chemie.png"
 import dna from "../../../assets/dna.png"
 import atom from "../../../assets/atom.png"
 ---
@@ -24,9 +25,9 @@ import atom from "../../../assets/atom.png"
         </p>
     </section>
 
-    <section class="overzicht s2">
-        <p>Bij <span class="blue-text">Cobalt blue</span> coaching kan je terecht voor:</p>
-        <div>
+    <section class="overzicht s2 card-section">
+        <p>Bij <strong>Cobalt blue</strong> coaching kan je terecht voor:</p>
+        <div class="flex">
             <ul>
                 <li>chemie, fysica en biologie</li>
                 <li>
@@ -37,14 +38,15 @@ import atom from "../../../assets/atom.png"
             </ul>
             <Image src={logo} alt="Cobalt blue logo" width={100} height={100}/>
         </div>
-        <p class="text-center">Maak nu vrijblijven en kosteloos een eerste afspraak: <span class="blue-text"> <br> 0470 61 23 07</span></p>
+        <p class="text-center">Maak nu vrijblijven en kosteloos een eerste afspraak:</p>
+        <p class="text-center"><strong>0470 61 23 07</strong></p>
     </section>
 
 <section class="inhoud s3">
-    <div class="column">
+    <div class=inhoud-card>
         <Image src={chemie} alt="chemie" width={80} height={80}/>
         <!-- <a href="https://www.flaticon.com/free-icons/science" title="science icons">Science icons created by Freepik - Flaticon</a> -->
-        <h2>CHEMIE</h2>
+        <h3>CHEMIE</h3>
         <p>
             | Atoommodel | Periodiek systeem van de elementen | 
             | Chemische bindingen | Reacties | Thermodynamica | 
@@ -53,10 +55,10 @@ import atom from "../../../assets/atom.png"
         </p>
     </div>
 
-    <div class="column">
+    <div class=inhoud-card>
         <Image src={dna} alt="dna" width={80} height={80}/>
         <!-- <a href="https://www.flaticon.com/free-icons/dna" title="dna icons">Dna icons created by Dimitry Miroliubov - Flaticon</a> -->
-        <h2>BIOLOGIE</h2>
+        <h3>BIOLOGIE</h3>
         <p>
             | Plantkunde | Cellen en deling | 
             | Een- en tweezaadlobbigen | Indeling van dieren | 
@@ -67,10 +69,10 @@ import atom from "../../../assets/atom.png"
         </p>
     </div>
 
-    <div class="column">
+    <div class=inhoud-card>
         <Image src={atom} alt="atom" width={80} height={80}/>
         <!-- <a href="https://www.flaticon.com/free-icons/science" title="science icons">Science icons created by Good Ware - Flaticon</a> -->
-        <h2>FYSICA</h2>
+        <h3>FYSICA</h3>
         <p>
             | Bewegingsleer | Krachten | 
             | Druk | Energie en arbeid | 
@@ -82,14 +84,6 @@ import atom from "../../../assets/atom.png"
 </Layout>
 
 <style>
-    section {
-        margin-bottom: 5rem;
-        padding: 3rem;
-        border-radius: 1.5rem;
-        background-color: var(--white);
-        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
-    }
-
     h2 {
         color: var(--cobalt-blue);
         margin-top: 1rem;
@@ -99,18 +93,14 @@ import atom from "../../../assets/atom.png"
     }
 
     .overzicht {
-        background-color: var(--white);
         border-left: 5px solid var(--cobalt-blue);
     }
 
-    .overzicht div {
+    .overzicht .flex {
         display: flex;
         justify-content: space-between;
         align-items: center;
         gap: 2rem;
-        margin-bottom: 2rem;
-        padding-bottom: 2rem;
-        border-bottom: 1px solid var(--light-gray);
     }
 
     .overzicht ul {
@@ -123,7 +113,7 @@ import atom from "../../../assets/atom.png"
         font-weight: bold;
         color: var(--cobalt-dark);
         position: relative;
-        padding-left: 1.5rem;
+        padding-left: 1.8rem;
     }
 
     .overzicht li::before {
@@ -131,36 +121,6 @@ import atom from "../../../assets/atom.png"
         position: absolute;
         left: 0;
         color: var(--cobalt-blue);
-    }
-
-    .text-center {
-        text-align: center;
-        font-size: 1.3rem;
-        font-weight: bold;
-    }
-
-    .inhoud {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-        gap: 2rem;
-        background: transparent;
-        box-shadow: none;
-        padding: 0;
-    }
-
-    .column {
-        background-color: var(--white);
-        padding: 2rem;
-        border-radius: 1.5rem;
-        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
-        text-align: center;
-        transition: transform 0.3s ease;
-    }
-
-    .inhoud p {
-        font-size: 1rem;
-        line-height: 1.6;
-        color: var(--text-main);
     }
 
     @media (max-width: 768px) {

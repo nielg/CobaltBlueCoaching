@@ -1,41 +1,50 @@
 ---
+import "../../../styles/inhoud.css"
 import Layout from "../../../layouts/Layout.astro";
 import Image from "astro/components/Image.astro";
 import logo from "../../../assets/logo.png"
-import chemie from "../../../assets/chemie.png"
+import chemieIcon from "../../../assets/icon/chemie.png"
 import books from "../../../assets/books.png"
 import oefeningen from "../../../assets/oefeningen.png"
+import chemie from "../../../assets/chemie.png"
+
 
 ---
 <Layout>
     <h1 class="page-title">Studiebegeleiding chemie in het hoger onderwijs</h1>
-    <section class="intro s1">
-        <ul>
-            <li>De prof chemie gebruikt andere woorden dan mijn humanioraleerkracht.</li>
-            <li>Het tempo van lesgeven is vaak te hoog.</li>
-            <li>Soms is me iets niet duidelijk, maar er is nauwelijks tijd voor vragen.</li>
-            <li>De hoeveelheid leerstof is niet te overzien.</li>
-            <li>Ik kan me er niet toe aanzetten te beginnen studeren.</li>
-            <li>Als ik studeer, werk ik niet zo efficiënt en weinig gestructureerd.</li>
-            <li>Bij het studeren heb ik nog niet echt een methode.</li>
-            <li>Ik weet niet precies wat er van me verwacht wordt bij het examen chemie.</li>
-        </ul>
-        <p id="bold">Herken je jezelf hierin?</p>
-        <p>
-            Studeren op de hogeschool of de univ kan een hele opgave zijn, vooral als je het in de humaniora nogal gemakkelijk had.
-            Nochtans hoef je van studeren geen stress te krijgen. Samen kunnen we iets doen aan jouw bezorgdheden.
-            De aangeboden coaching is individueel en op jouw maat. Elke coaching-sessie duurt minstens 1 uur. 
-            Ik werk vooral in en rond Leuven en verplaats me met de fiets naar een door jou gekozen locatie. 
-            Coaching kan best in je vertrouwde studeeromgeving, bij je thuis of op kot. 
-            Voor verplaatsingen van meer dan 5 km van mijn woning vraag ik een kleine extra vergoeding. 
-            De eerste afspraak is volledig vrijblijvend. We maken kennis en bespreken de moeilijkheden die jij ondervindt bij het studeren. 
-            Het is verder belangrijk dat je een goed gevoel hebt bij mijn stijl van coaching. 
-            Als ik je probleem kan verhelpen en indien ook jij beslist dat ik je verder mag begeleiden, dan spreken we op regelmatige basis af om je vorderingen op te volgen. 
-            De kostprijs mag geen belemmering zijn: er is een vast uurtarief, maar een verlaagd tarief is mogelijk voor beursstudenten.
-        </p>
+    <section>
+        <div class="intro s1">
+            <!-- <Image src={chemie} alt="chemie"/> -->
+             <h3 class="text-center">Herken je jezelf hierin?</h3>
+            <ul>
+                <li>De prof chemie gebruikt andere woorden dan mijn humanioraleerkracht.</li>
+                <li>Het tempo van lesgeven is vaak te hoog.</li>
+                <li>Soms is me iets niet duidelijk, maar er is nauwelijks tijd voor vragen.</li>
+                <li>De hoeveelheid leerstof is niet te overzien.</li>
+                <li>Ik kan me er niet toe aanzetten te beginnen studeren.</li>
+                <li>Als ik studeer, werk ik niet zo efficiënt en weinig gestructureerd.</li>
+                <li>Bij het studeren heb ik nog niet echt een methode.</li>
+                <li>Ik weet niet precies wat er van me verwacht wordt bij het examen chemie.</li>
+            </ul>
+            <div class="lr-padding">
+                <!-- <h4>Herken je jezelf hierin?</h4> -->
+                <p class="text-justify">
+                    Studeren op de hogeschool of de univ kan een hele opgave zijn, vooral als je het in de humaniora nogal gemakkelijk had.
+                    Nochtans hoef je van studeren geen stress te krijgen. Samen kunnen we iets doen aan jouw bezorgdheden.
+                    De aangeboden coaching is individueel en op jouw maat. Elke coaching-sessie duurt minstens 1 uur. 
+                    Ik werk vooral in en rond Leuven en verplaats me met de fiets naar een door jou gekozen locatie. 
+                    Coaching kan best in je vertrouwde studeeromgeving, bij je thuis of op kot. 
+                    Voor verplaatsingen van meer dan 5 km van mijn woning vraag ik een kleine extra vergoeding. 
+                    De eerste afspraak is volledig vrijblijvend. We maken kennis en bespreken de moeilijkheden die jij ondervindt bij het studeren. 
+                    Het is verder belangrijk dat je een goed gevoel hebt bij mijn stijl van coaching. 
+                    Als ik je probleem kan verhelpen en indien ook jij beslist dat ik je verder mag begeleiden, dan spreken we op regelmatige basis af om je vorderingen op te volgen. 
+                    De kostprijs mag geen belemmering zijn: er is een vast uurtarief, maar een verlaagd tarief is mogelijk voor beursstudenten.
+                </p>
+            </div>
+        </div>
     </section>
 
-    <section class="overzicht s2">
+    <section class="overzicht s2 card-section">
         <p>Bij <span class="blue-text">Cobalt blue</span> coaching kan je terecht voor:</p>
         <div>
             <ul>
@@ -46,15 +55,15 @@ import oefeningen from "../../../assets/oefeningen.png"
                 <li>mogelijkheid tot tariefverlaging (zie tarieven)</li>
             </ul>
             
-            <Image src={logo} alt="Cobalt blue logo" width={100} height={100}/>
+            <Image src={logo} alt="Cobalt blue logo" width={300} height={300}/>
         </div>
 
         <p>Maak nu vrijblijven en kosteloos een eerste afspraak: <span class="blue-text">0470 61 23 07</span></p>
     </section>
 
 <section class="inhoud s3">
-    <div>
-        <Image src={chemie} alt="chemie" width={80} height={80}/>
+    <div class="inhoud-card">
+        <Image src={chemieIcon} alt="chemie" width={80} height={80}/>
         <!-- <a href="https://www.flaticon.com/free-icons/science" title="science icons">Science icons created by Freepik - Flaticon</a> -->
         <h2>THEORIE</h2>
         <p>Chemische reacties</p>
@@ -74,7 +83,7 @@ import oefeningen from "../../../assets/oefeningen.png"
         <p>Anorganische en organische chemie, biochemie</p>
     </div>
 
-    <div>
+    <div class="inhoud-card">
         <Image src={oefeningen} alt="oefeningen" width={80} height={80}/>
         <!-- <a href="https://www.flaticon.com/free-icons/contract" title="contract icons">Contract icons created by Freepik - Flaticon</a> -->
         <h2>OEFENINGEN</h2>
@@ -91,50 +100,49 @@ import oefeningen from "../../../assets/oefeningen.png"
         <p>Thermodynamica - berekeningen enthalpie, entropie, Gibbs vrije energie, wet van Hess</p>
     </div>
     
-    <div>
+    <div class="inhoud-card">
         <Image src={books} alt="cursussen" width={80} height={80}/>
         <!-- <a href="https://www.flaticon.com/free-icons/subject" title="subject icons">Subject icons created by Rashad - Flaticon</a> -->
         <h2>CURSUSSEN</h2>
         
-        <h3>Faculteit Wetenschappen KU Leuven</h3>
+        <h4>Faculteit Wetenschappen KU Leuven</h4>
         <p>Grondslagen van de chemie, prof. K. Clays | Bio-organische chemie, prof. M. Smet | Synthese en karakterisatie, prof. W. Dehaen | Chemie van natuurprodukten, prof. E. Van der Eyken</p>
 
-        <h3>Fac. Bio-ingenieurswetenschappen KUL</h3>
+        <h4>Fac. Bio-ingenieurswetenschappen KUL</h4>
         <p>Algemene Chemie, prof. D. De Vos | Organische Chemie, prof. S. De Feyter | Anorganische Chemie, prof. J. Martens</p>
 
-        <h3>Fac. Farmaceutische wetenschappen KUL</h3>
+        <h4>Fac. Farmaceutische wetenschappen KUL</h4>
         <p>Chemie: Algemene Concepten, prof. W. Dehaen</p>
 
-        <h3>Fac. Geneeskunde KUL</h3>
+        <h4>Fac. Geneeskunde KUL</h3>
         <p>Algemene en Biologische Scheikunde, prof. G. Koeckelberghs</p>
 
-        <h3>Fac. Bewegings- en revalidatiewetenschappen KUL</h3>
+        <h4>Fac. Bewegings- en revalidatiewetenschappen KUL</h4>
         <p>Chemie (en inleiding tot de biologische chemie), prof. W. De Borggraeve</p>
 
-        <h3>Fac. Ingenieurswetenschappen KUL</h3>
+        <h4>Fac. Ingenieurswetenschappen KUL</h4>
         <p>Scheikunde, prof. B. Goderis</p>
 
-        <h3>PBA Chemie UCLL</h3>
+        <h4>PBA Chemie UCLL</h4>
         <p>Algemene chemie, prof. G. Dehaen</p>
     </div>
 </section>
 </Layout>
 
 <style>
-    section {
-        margin-bottom: 5rem;
-        padding: 3rem;
-        border-radius: 1.5rem;
-        background-color: var(--white);
-        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+    .lr-padding{
+        padding: 0 2rem;
     }
 
+
     .intro ul {
-        background-color: var(--off-bleu);
-        padding: 2rem 2rem 2rem 3rem;
-        border-radius: 1rem;
-        border-left: 5px solid var(--cobalt-light);
-        margin-bottom: 2rem;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        margin: auto;
+        width: fit-content;
+        border-bottom: 2px  solid var(--primary);
+        padding: 2rem 15rem;
     }
 
     .intro li {
@@ -143,21 +151,6 @@ import oefeningen from "../../../assets/oefeningen.png"
         color: var(--dark-gray);
     }
 
-    #bold {
-        font-weight: bold;
-        text-align: center;
-        margin: 2rem 0;
-        font-size: 1.4rem;
-        color: var(--cobalt-blue);
-    }
-
-    h2 {
-        color: var(--cobalt-blue);
-        margin-top: 1rem;
-        margin-bottom: 1.5rem;
-        border-bottom: 2px solid var(--cobalt-light);
-        display: inline-block;
-    }
 
     .overzicht {
         border-left: 5px solid var(--cobalt-blue);
@@ -165,12 +158,8 @@ import oefeningen from "../../../assets/oefeningen.png"
 
     .overzicht div {
         display: flex;
-        justify-content: space-between;
         align-items: center;
-        gap: 2rem;
-        margin-bottom: 2rem;
-        padding-bottom: 2rem;
-        border-bottom: 1px solid var(--light-gray);
+        justify-content: space-between;
     }
 
     .overzicht ul {
@@ -191,63 +180,6 @@ import oefeningen from "../../../assets/oefeningen.png"
         position: absolute;
         left: 0;
         color: var(--cobalt-blue);
-    }
-
-    .inhoud {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-        gap: 2rem;
-        background: transparent;
-        box-shadow: none;
-        padding: 0;
-    }
-
-    .inhoud > div {
-        background-color: var(--white);
-        padding: 2.5rem;
-        border-radius: 1.5rem;
-        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
-        text-align: center;
-        transition: transform 0.3s ease;
-    }
-
-    .inhoud > div:hover {
-        transform: translateY(-5px);
-    }
-
-    .inhoud p {
-        font-size: 1rem;
-        line-height: 1.6;
-        color: var(--text-main);
-        margin: 0.5rem 0;
-    }
-
-    .inhoud span {
-        color: var(--cobalt-light);
-        font-weight: bold;
-        display: block;
-        margin: 0.5rem 0;
-    }
-
-    .inhoud h3 {
-        font-size: 1.1rem;
-        margin: 1.5rem 0 0.5rem;
-        color: var(--cobalt-dark);
-        text-align: left;
-        border-left: 3px solid var(--cobalt-light);
-        padding-left: 0.5rem;
-    }
-
-    .inhoud h3 + p {
-        text-align: left;
-        font-size: 0.95rem;
-        margin-bottom: 1rem;
-    }
-
-    @media (max-width: 1024px) {
-        .inhoud {
-            grid-template-columns: 1fr;
-        }
     }
 
     @media (max-width: 768px) {
